@@ -1,0 +1,8 @@
+<li>
+	<% if lent.is_collection? %>
+		<%= link_to image_tag(lent.image_thumb), lent_path(lent), remote: true %>
+	<% else  %>
+		<%= render partial: 'image_script', locals: {lent: lent} %>
+    <% end  %>
+    <span><%= lent.name %></span>
+</li>

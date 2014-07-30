@@ -1,0 +1,89 @@
+a {
+    color: white;
+}
+form {
+    margin: 20px;
+    text-align: center;
+    div.field {
+        
+        margin: 0 40%;
+        height: 20px;
+    }
+    table {
+        margin: 0 40%;
+        text-align: left;
+    }
+}
+body {
+    /*background: image-url('bigbackjpg.jpg') no-repeat top left fixed;*/
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-color: #444;
+    }
+#center {
+    width:100%;
+}
+div#logo {
+    border: 0px solid white;
+    position: absolute; 
+    width: 800px;
+    height: 152px;
+    left: 32%;
+    clear: both;
+    background: image-url('logo_wh.png') no-repeat; 
+    background-size: 100% 50%;
+    background-position-y: 0%;
+    opacity: 0.8;
+    overflow: no-display;
+    &:hover {opacity: 0.9; cursor: pointer;}
+}
+
+div#contact {
+    font-family: helvetica; 
+    font-size:1.52em;
+    position: absolute;
+/*    left: 28%;*/
+    left: 0;
+    right: 0;
+    
+    font-weight: 100;
+    text-shadow: 1px 1px #0d0901;
+    height: auto;
+    background: rgba(14, 9, 1, 0.8 );
+    padding: 25px 30px 25px 32%;
+    text-align: left; 
+    margin: auto; 
+    float: left;
+    clear: both; 
+    display: none; 
+    overflow: hidden;
+    border: 0px solid wheat
+}
+.divcollections {
+    display:none; float:left !important;  overflow-x: auto; width:auto !important;
+}
+#center {
+    	/* Set it so we could calculate the offsetLeft */
+	position: absolute;
+    height: 290px;
+	overflow: auto;
+    border: 0px solid wheat
+}
+ul.sc_menu, ul.collections {
+    filter:alpha(opacity=50);	
+	opacity: 0.8;
+	display: block;
+	height: 215px;
+	/* max width here, for users without javascript */	
+	
+	padding: 15px 0 0 0px; 
+	/* removing default styling */
+	margin: 0;
+    background: image-url('kino3.png');
+    background-repeat: repeat-x;
+    background-size: auto 100%;
+    border: 0px solid white;
+    list-style: none;
+}

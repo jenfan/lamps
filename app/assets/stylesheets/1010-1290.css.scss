@@ -1,0 +1,30 @@
+@media all and (min-width: 1010px) and (max-width: 1290px) {
+    div#logo {
+        left: 32%;
+    }
+    div#logo {
+        left: 27% !important;
+        background-size: 70% !important;
+        background-origin: padding-box;
+        background-position-y: 25% !important;
+        background-position-x: 22% !important;
+    }
+    #drop img, .otstup, .divcollections img {
+	    margin-top: 6px !important;
+	    margin-bottom: 31px !important;
+	    height: 110px !important;
+	    background-color: #0d0901 !important;
+	    border-top: 2px #0d0901 solid !important;
+	    border-bottom: 2px #0d0901 solid !important;
+		border-right: 5px #0d0901 solid !important;	
+	    border-left: 5px #0d0901 solid !important;
+   }
+   #drop img, .divcollections img {
+   width: 108px !important;
+   }
+   .otstup { width: 10px;}
+   div#lenta_main, .divcollections {height: 214px !important;}
+   ul.sc_menu, ul.collections {height: 141px !important;}
+   span {font-size: 19px !important;}
+   #navlist img {width: 35px !important;} 
+}

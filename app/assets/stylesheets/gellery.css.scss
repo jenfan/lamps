@@ -1,0 +1,22 @@
+#galleria{
+    height: 700px; 
+    width: 800px;  
+    margin:0px auto;}
+
+div#gallery {
+    display: none;
+    overflow: hidden;
+    position: absolute; 
+    height: auto; 
+    width: auto; 
+    top:0; 
+    bottom: 0; 
+    left: 10px; 
+    right: 10px; 
+    color: white; font-size: 25pt; text-align: center; margin: 0px; float: none;
+    clear: both;  padding-top: 20px;
+/*    background: rgba(234, 234, 208, 0.3);*/
+    background: rgba(24, 22, 17, 0.6 );
+    filter:progid:DXImageTransform.Microsoft.gradient( startColorstr=#30eaead0,endColorstr=#30eaead0); 
+
+}

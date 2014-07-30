@@ -1,0 +1,18 @@
+<%= link_to(image_tag(lent.image_thumb), lent.images.first.image_full.to_s, class: "#{lent.id}") if lent.images.size!=0 %>
+<script type="text/javascript">
+		$(".<%= lent.id %>").click(function() {
+	    $.fancybox.open([
+	        <% lent.images.each do |image| %>
+        		{
+			        href : '<%= image.image_full.to_s %>',                
+			        //title : '1st title'
+			    },
+	        <% end %>
+		    ], {
+		        // padding : 0
+		        // loop: false
+		        'arrows': true
+		    });
+		    return false;
+	    });
+	</script>

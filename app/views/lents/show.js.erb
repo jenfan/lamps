@@ -1,0 +1,5 @@
+$('#lenta_main li').hide();
+$('#drop').append("<%= j render 'li_back' %>");
+$('#drop').append("<%= j render partial: 'partial_of_collection_images', collection: @lents, as: :lent %>");
+$('ul.sc_menu').css("width", ($('li.append').length-1)*$('li.append:last').width()+103+'px' );
+lenta();

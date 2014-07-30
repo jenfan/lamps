@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  main: 
+  is_main: false
+  name: MyString
+  image_full: MyString
+  image_thumb: MyString
+
+two:
+  main: 
+  is_main: false
+  name: MyString
+  image_full: MyString
+  image_thumb: MyString

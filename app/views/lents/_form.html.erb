@@ -1,0 +1,42 @@
+<%= form_for(@lent) do |f| %>
+  <% if @lent.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@lent.errors.count, "error") %> prohibited this lent from being saved:</h2>
+
+      <ul>
+      <% @lent.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+<table>
+  <tr>
+      <td><%= f.label :name %></td>
+      <td><%= f.text_field :name %></td>
+  </tr>
+  <tr>
+      <td><%= f.label :is_main %></td>
+      <td><%= f.check_box :is_main %></td>
+  </tr>
+  <tr>
+      <td><%= f.label :main_id %></td>
+      <td><%= f.select :main_id, Lent.all_main.collect {|c| [ c.name, c.id ] }, prompt: "Коллекция" %></td>
+  </tr>
+  <tr>
+      <td><%= f.label :image_thumb %></td>
+      <td><%= f.file_field :image_thumb %></td>
+  </tr>
+  <tr>
+      <td><%= f.label :image_full %></td>
+      <td><%= f.file_field :image_full %></td>
+  </tr>
+  <tr>
+      <td colspan="2">
+        <div class="actions">
+        <%= f.submit %>
+        </div>
+  </td></tr>
+</table>
+
+<% end %>

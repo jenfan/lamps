@@ -1,0 +1,68 @@
+img.back {
+    background-color:#0d0901 !important; 
+}
+li.back {
+    cursor:pointer; 
+    width:100px;
+    color:white;
+    opacity:1 !important;
+    font-size:30pt;
+    vertical-align:middle;
+    text-align:center;
+}
+
+.collections {
+    left:100px;
+    float: right;
+    padding-bottom: 100px;
+    border: 1px solid white;
+}
+.sc_menu li, .collections li {
+        display: block;
+	float: left;	
+	padding: 0 0px;
+}
+.sc_menu a, .collections a {
+	display: block;
+	text-decoration: none;
+}
+.sc_menu li span {
+    display: none;
+}
+.sc_menu li:hover span {
+    display: block;
+    background: #000;
+    float: none;
+    text-align: center;
+}
+#drop img, .otstup, .divcollections img {
+    margin-top: 18px;
+    margin-bottom: 39px;
+    height: 160px;
+    background-color: #0d0901;
+    border-top: 2px #0d0901 solid;
+    border-bottom: 2px #0d0901 solid;
+	border-right: 9px #0d0901 solid;	
+    border-left: 9px #0d0901 solid;
+   }
+
+#drop img, .otstup, .divcollections img {
+width: 158px;
+}
+
+.otstup {
+    width: 10px;
+}
+/* Here are styles for the back button, don't look at them */
+ .sc_menu > li > span {
+	
+	color: #c0b8a9 !important;
+    padding: 4px;
+    background-color: #0d0901 !important;
+	font-size: 24px;
+        font-family: helvetica;
+        display: none;
+	margin-top: 10px;
+	font-weight: bold;
+	text-align: center;
+}

@@ -1,0 +1,33 @@
+div.navlistdiv {
+    position: absolute;
+    right:4%;
+    margin-left: -100px;
+    clear: both;
+    padding-bottom: 0px;
+    bottom: 0px;
+    width: 300px;
+    height: 300px;
+    vertical-align: bottom;
+    padding:0px;margin:0px;
+    background: image-url('uborschitsa2.png') no-repeat right bottom;
+    background-size: 100%;
+ 	vertical-align: bottom;
+}
+
+#navlist{position:absolute; left: 0; bottom: 0;}
+#navlist li{margin-left:30px;padding:0;list-style:none; display: block; float: left; top:0;}
+#navlist li, #navlist a{display:block; opacity: 0.8}
+#navlist li:hover, #navlist a:hover{opacity: 1}
+#navlist img {width: 45px;}
+#home, #a_contact, #proect{cursor: pointer}
+
+
+a.navi {
+    font-size: 20pt;
+    color: #999;
+    text-transform: uppercase;
+    text-decoration: none;
+    text-shadow: 2px 2px 14px #000;
+    opacity: 0.5;
+    margin: 0 5px;
+}
