@@ -13,6 +13,8 @@
 //= require jquery
 //= require jquery_ujs
 //= require fancybox
+//= require galleria-1.3.6.min
+//= require galleria.azur.min
 //= require_tree .
 
 $(document).ready(function(){
@@ -39,4 +41,36 @@ $(document).ready(function(){
 $(document).ready(function() {
   $('ul.sc_menu').css("width", ($('ul.sc_menu li').length-1)*$('li').eq(1).width()+28+'px' );
   lenta();
+  $('#contact_nav').click(function() {
+    $('div#contact').fadeIn();
+    $('ul.sc_menu').fadeOut();
+    $('#galleria').fadeOut();
+  });
+  $('#home_nav').click(function(){
+    $('ul.sc_menu').fadeIn();
+    $('div#contact').fadeOut();
+    $('#galleria').fadeOut();
+  });
+  $('#gallery_nav').click(function(){
+    $('ul.sc_menu').fadeOut();
+    $('div#contact').fadeOut();
+    $('#galleria').fadeIn();
+  });
+  $('li').hover(function(){
+    $(this).find('span').css("display","block")
+  }, function() {
+    $(this).find('span').css("display","none")
+  });
+  Galleria.run('#galleria', {
+      thumbnails: 'lazy',
+      preload:3
+  });
+  Galleria.ready(function(options) {
+
+      // this = the gallery instance
+      // options = the gallery options
+      var gallery = this;
+      this.lazyLoadChunks( 10,1000 );
+  });
 });
+

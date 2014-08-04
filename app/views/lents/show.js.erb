@@ -1,5 +1,7 @@
-$('#lenta_main li').hide();
-$('#drop').append("<%= j render 'li_back' %>");
-$('#drop').append("<%= j render partial: 'partial_of_collection_images', collection: @lents, as: :lent %>");
-$('ul.sc_menu').css("width", ($('li.append').length-1)*$('li.append:last').width()+103+'px' );
-lenta();
+$('#lenta_main li').fadeOut(150).promise().done(function() {
+	$('ul.sc_menu').append("<li class='back append'><%= j link_to image_tag('strelka.png', class: 'back'), root_path, remote: true %></li>");
+	$('ul.sc_menu').append("<%= j render partial: 'partial_of_collection_images', collection: @lents, as: :lent %>");
+	$('ul.sc_menu').css("width", ($('li.append').length-1)*$('li.append:last').width()+103+'px' );
+lenta();	
+});
+

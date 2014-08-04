@@ -1,4 +1,13 @@
-<%= link_to(image_tag(lent.image_thumb), lent.images.first.image_full.to_s, class: "#{lent.id}") if lent.images.size!=0 %>
+<% lent.image_full? ? onmouseover = "this.src ='"+lent.image_full.to_s+"';" : ''  %>
+<% lent.image_thumb? ? onmouseout = "this.src ='"+lent.image_thumb.to_s+"';" : '' %>
+
+<% if lent.images.any? %>
+	<%= link_to(image_tag(lent.image_thumb, onmouseover: onmouseover, onmouseout: onmouseout), lent.images.first.image_full.to_s,
+	 class: "#{lent.id}") if lent.images.size!=0 %>
+<% else %>
+	<%= image_tag(lent.image_thumb,  onmouseover: onmouseover, onmouseout: onmouseout) %>
+<% end %>
+
 <script type="text/javascript">
 		$(".<%= lent.id %>").click(function() {
 	    $.fancybox.open([

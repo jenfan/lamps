@@ -9,22 +9,19 @@
 <body>
 <p class="notice"><%= notice %></p>
 <p class="alert"><%= alert %></p>
-<%= link_to 'main', root_path %>
-<%= link_to 'index', lents_path %>
-<BR><BR>
-<div id="logo" class="tohome">&nbsp;</div>
-<div id="contact">Tel./Fax: +7(495)389-18-09<br> E-mail: mgardens@bk.ru<br>Адрес: 17545, г. Москва, 1-й Дорожный проезд, д. 4 стр. 1</div>
-<div id="gallery"></div>
 
 <div id="center">	
-	<%= yield %>
+  <div id="logo" class="tohome">&nbsp;</div>
+  <div id="contact">Tel./Fax: +7(495)389-18-09<br> E-mail: mgardens@bk.ru<br>Адрес: 17545, г. Москва, 1-й Дорожный проезд, д. 4 стр. 1</div>
+  <%= yield %>
 </div>
+<div id="galleria"></div>
 
 <div class="navlistdiv">
    <ul id="navlist" style="text-align:center; float: none;">
-       <li id="home" class="tohome"><a src="#" id="home"><%= image_tag "home.png" %></a></li>
-       <li id="a_contact"><a src="#" id="contact"><%= image_tag "contacts.png"%></a></li>
-       <li id="proect"><a src="#" id="proect" class="sample"><%= image_tag "done.png"%></a></li>
+       <li id="home_nav" class="tohome"><%= link_to image_tag("home.png"), lents_path, remote:true %></li>
+       <li id="contact_nav"><a src="#" id="contact"><%= image_tag "contacts.png"%></a></li>
+       <li id="gallery_nav"><%= link_to image_tag("done.png"), gallery_lents_path, remote:true, class: 'sample', id: 'proect' %></li>
    </ul>
 </div>
 </body>

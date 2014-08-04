@@ -1,0 +1,14 @@
+$('contact').fadeOut();
+$('ul.sc_menu').fadeOut();
+if ($('div.galleria-container').length) {
+	$('div#galleria').show();
+} else {
+	// $('div#galleria').html("<%= j render partial: 'gallery', collection: @gallery, as: :img %>");
+	
+	$('div#galleria').fadeIn();
+	
+}
+Galleria.get(0).load(<%= raw @data.to_s.gsub('"', '') %>);
+// Galleria.get(0).load([{ image: 'http://localhost:3000/uploads/lent/image_thumb/11/10_0_Mini.jpg' }]);
+
+// Galleria.get(0).load(<%= raw @data %>);

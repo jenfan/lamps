@@ -1,20 +1,22 @@
+# encoding: utf-8
 ActiveAdmin.register Image do
-  menu :label => "Images",:priority => 2, :parent => "Lents"
+  menu :label => "Фото",:priority => 16
   index do
-    column :Lent_name do |lent|
+    selectable_column
+    column "Фото кадра", :Lent_img do |lent|
+      image_tag Lent.find(lent.lent_id).image_thumb, size:"40x40" if Lent.find(lent.lent_id)
+    end
+    column "Название кадра", :Lent_name, :max_width => "300px" do |lent|
       Lent.find(lent.lent_id).name if Lent.find(lent.lent_id) 
     end
-    column :Lent_img do |lent|
-      image_tag Lent.find(lent.lent_id).image_thumb, size:"30x30" if Lent.find(lent.lent_id)
-    end
-    column :image do |image|
-      image_tag image.image_full, size: "50x50"
+    column "Фото",:image do |image|
+      image_tag image.image_full, size: "70x70"
     end
     actions
   end
   
   coll = Lent.where(is_main: false)+Lent.where(is_main:true,is_collection:false)
-  coll = coll.map {|x| x if x.images(true).size==0}.compact || coll
+  coll = coll.map {|x| x if x.images(true).empty?}.compact || coll
   
 
   form do |f| 
@@ -44,5 +46,7 @@ ActiveAdmin.register Image do
   #  permitted << :other if resource.something?
   #  permitted
   # end
+
+
   
 end

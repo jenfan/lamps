@@ -1,7 +1,9 @@
 Rails.application.routes.draw do
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
-  resources :lents
+  resources :lents, only: [:index, :show] do
+    match 'gallery', :on => :collection, via: 'get'
+  end
   root 'lents#index'
 
   # The priority is based upon order of creation: first created -> highest priority.
