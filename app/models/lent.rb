@@ -2,7 +2,7 @@ class Lent < ActiveRecord::Base
 	has_many :lents, class_name: "Lent", foreign_key: "main_id"
 	has_many :images
 
-	belongs_to :main, -> { where(is_main: true, is_collection: false) }, class_name: "Lent", foreign_key: "id"
+	belongs_to :main, -> { where(is_main: true, is_collection: false) }, class_name: "Lent", foreign_key: "main_id"
 	mount_uploader :image_full, ImageUploader
 	mount_uploader :image_thumb, ImageUploader
 

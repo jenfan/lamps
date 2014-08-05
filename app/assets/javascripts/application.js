@@ -14,7 +14,7 @@
 //= require jquery_ujs
 //= require fancybox
 //= require galleria-1.3.6.min
-//= require galleria.azur.min
+//= require galleria.classic.min
 //= require_tree .
 
 $(document).ready(function(){
@@ -61,16 +61,16 @@ $(document).ready(function() {
   }, function() {
     $(this).find('span').css("display","none")
   });
+
   Galleria.run('#galleria', {
-      thumbnails: 'lazy',
-      preload:3
+      // thumbnails: 'lazy',
+      fullscreenDoubleTap: true,
   });
   Galleria.ready(function(options) {
 
       // this = the gallery instance
       // options = the gallery options
-      var gallery = this;
-      this.lazyLoadChunks( 10,1000 );
+      // this.lazyLoadChunks( 10,1000 );
   });
 });
 
