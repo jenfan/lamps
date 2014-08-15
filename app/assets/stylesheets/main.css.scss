@@ -1,5 +1,5 @@
 body {
-    /*background: image-url('bigbackjpg.jpg') no-repeat top left fixed;*/
+    background: image-url('bigbackjpg.jpg') no-repeat top left fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -16,7 +16,7 @@ div#logo {
     height: 152px;
     left: 32%;
     clear: both;
-    background: image-url('logo_wh.png') no-repeat; 
+    background: url('logo_wh.png') no-repeat; 
     background-size: 100% 50%;
     background-position-y: 0%;
     opacity: 0.8;
@@ -42,6 +42,9 @@ div#contact {
 }
 #galleria {
     display: none;
+    .galleria-container {
+        z-index: 200;
+    }
 }
 .divcollections {
     display:none; float:left !important;  overflow-x: auto; width:auto !important;

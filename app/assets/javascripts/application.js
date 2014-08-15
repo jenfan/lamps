@@ -34,10 +34,6 @@ $(document).ready(function(){
     $(window).resize();
 });    //____ $(document).ready END____
 
-$(document).ready(function(){
-    $('#logo').hide();
-});
-
 $(document).ready(function() {
   $('ul.sc_menu').css("width", ($('ul.sc_menu li').length-1)*$('li').eq(1).width()+28+'px' );
   lenta();
