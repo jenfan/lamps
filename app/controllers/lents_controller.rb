@@ -6,6 +6,6 @@ class LentsController < ApplicationController
     @lents = Lent.find(params[:id]).lents(include: :images)
   end
   def gallery
-    @images = Image.all.collect {|x| { image: "#{x.image_full}" }}
+    @images = Gallery.all.collect {|x| { image: "#{x.path}" }}
   end
 end
