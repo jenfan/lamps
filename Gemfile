@@ -11,6 +11,7 @@ group :development do
 	gem 'yaml_db', github: 'jetthoughts/yaml_db'
 end
 gem 'pg'
+gem 'rails_12factor', group: :production
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.3'
