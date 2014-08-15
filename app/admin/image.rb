@@ -15,11 +15,11 @@ ActiveAdmin.register Image do
     actions
   end
   
-  coll = Lent.where(is_main: false)+Lent.where(is_main:true,is_collection:false)
-  coll = coll.map {|x| x if x.images(true).empty?}.compact || coll
   
 
   form do |f| 
+  coll = Lent.where(is_main: false)+Lent.where(is_main:true,is_collection:false)
+  coll = coll.map {|x| x if x.images(true).empty?}.compact || coll
   f.inputs "Images" do
     f.input :lent_id, :as => :select, :collection => coll.collect {|u| [u.name, u.id]}, :include_blank => false
     f.input :image_full

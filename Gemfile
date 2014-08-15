@@ -6,12 +6,11 @@ gem 'rails', '4.1.4'
 # Use sqlite3 as the database for Active Record
 
 group :development do
-  gem 'sqlite3'
+	gem 'thin'
+	gem 'sqlite3'
+	gem 'yaml_db', github: 'jetthoughts/yaml_db'
 end
-group :production do
-	gem 'pg'
-end
-gem 'yaml_db', github: 'jetthoughts/yaml_db'
+gem 'pg'
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.3'
@@ -49,5 +48,4 @@ gem 'spring',        group: :development
 gem 'carrierwave'
 gem 'activeadmin', github: 'gregbell/active_admin'
 gem 'devise'
-gem 'thin'
 gem 'fancybox2-rails'
