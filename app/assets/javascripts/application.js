@@ -42,7 +42,7 @@ $(document).ready(function() {
     $('ul.sc_menu').fadeOut();
     $('#galleria').fadeOut();
   });
-  $('#home_nav').click(function(){
+  $('#home_nav, #logo').click(function(){
     $('ul.sc_menu').fadeIn();
     $('div#contact').fadeOut();
     $('#galleria').fadeOut();

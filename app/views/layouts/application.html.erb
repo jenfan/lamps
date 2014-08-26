@@ -10,7 +10,7 @@
 <p class="notice"><%= notice %></p>
 <p class="alert"><%= alert %></p>
 
-  <div id="logo" class="tohome">&nbsp;</div>
+  <%= link_to '<div id="logo" class="tohome">&nbsp;</div>'.html_safe, lents_path, remote:true %>
 <div id="center"> 
   <div id="contact">Tel./Fax: +7(495)389-18-09<br> E-mail: mgardens@bk.ru<br>Адрес: 17545, г. Москва, 1-й Дорожный проезд, д. 4 стр. 1</div>
   <%= yield %>
