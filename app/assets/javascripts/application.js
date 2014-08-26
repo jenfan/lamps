@@ -57,7 +57,6 @@ $(document).ready(function() {
   }, function() {
     $(this).find('span').css("display","none")
   });
-  Galleria.loadTheme('galleria.classic.min.js');
   Galleria.run('#galleria', {
       // thumbnails: 'lazy',
       fullscreenDoubleTap: true,
